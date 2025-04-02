@@ -1,0 +1,210 @@
+原则：
+    1.代码简洁，逻辑清晰，格式严谨，数据要正确,最好带大括号
+    2.全错看逻辑和语法
+    3.运行时间错误可能是死循环
+    4.语法逻辑没问题看特殊
+    5.特殊包括，数据大小，逻辑死角
+    6.一定要！！！！
+        -约定好数据
+        -return 0；
+        -超过1000的数组开全局数组，函数里的数组大小有限制
+    7.少用if，else语句
+    8.数字6不可以被除二一直到1，而是到奇数三
+    9.double最多储存15-17位数字,long double则是18到19位
+    10.递归有限制，如果深度太深导致递归占用内存过多
+       会导致栈溢出
+
+
+
+
+##注意
+--- 注释以//开头   语句末尾要有分号;   要有return结束进程   编码为GBK时Windows终端下中文正常显示，但在VS Code下中文显示乱码，需要设置UTF-8编码。
+--- 函数外声明的变量是全局变量,所以函数都可以使用
+--- 判断是否为完全平方数：int is = sqrt(i); 满足i==is*is
+--- 用while进行连续输入,如while (scanf("%d",&a)>0&&a!=0)
+--- 若想break for循环，得在其第一层内嵌出现
+--- for里的条件int的变量i在不同的for中互不影响
+--- 注意，“==”不能用来判断两个字符串是否相等，单个字符可以
+    应该使用一个库函数： strcmp，它比较的是两个字符串的ASC码。
+    语法：strcmp(字符串1，字符串2);
+    如果字符串1与字符串2相同，则返回0；
+    如果前者大于后者，则返回1；
+    如果前者小于后者，则返回-1.
+--- scanf函数若读不到有效的值则返回EOF
+--- fgets(input, sizeof(input), stdin);该函数可读取字符串
+--- 若是a/b的题a/b赋予c，c一般不会溢出,但是a,b可能会
+    这时候要a，b同除1000,避免储存a,b的变量数值溢出
+--- 高精度算法可以拆分数字存入数组，一一相加
+--- 栈：一次只输入或输出一个值，并且是只有一个开口，好像
+    往羽毛球桶里放带编号的羽毛球.
+--- %5d整形数字宽度为5
+--- 显示数字后几位可用求余(后一位%10)
+--- 不可以写出-1<=x<=1,要写x>=-1&&x<=1
+--- %%代表百分号,小数变为百分比要*100
+--- 函数定义在main上面时不用声明，在下面就要在main里声明
+--- 写深搜时看看x代表行还是列
+--- unsigned long long(20位数)longlong(19位数)
+
+
+内置函数:
+    scanf("%d",&a); %d是数据类型，出现在“”里的东西你一定要这样输入&是地址，把数据存入a
+
+
+常识
+//  &a的&是地址符方便把值存入变量a的地址
+//  printf输出，scanf输入
+//  %d十进制整数,%f单精度浮点数,%lf双精度浮点数,%s字符串,%c字符,%p指针,%lld超长整数,%g与输入同
+//  int整数，float单精度浮点数，double双精度浮点数，char字符，string字符串
+//  /n换行符
+//  long long和int范围不一样,为2的63次方数据类型%lld
+//  int -2^31 ~ 2^31-1,long long-2^63~2^63-1,
+//  用整数与浮点数计算会自动把整数转化为浮点数
+//  flout不行时用double，int不行时用long long
+//  保留一位小数  %.1f
+//  short 2,int 4,double 8,float 4,char 1;bool 1;
+//  1e-6=0.000001 1e7=10^7
+
+
+
+#运算符
+" "空格符
++ 加法
+- 减法
+* 乘法
+/ 除法
+% 取余
+~ 取反运算符,~0=1,~1=0;
+++ 自增 a++表达式是原值,++a是加一后的值
+-- 自减
+= 赋值
+== 等于
+!= 不等于
+> 大于
+< 小于
+>= 大于等于
+<= 小于等于
+&& 逻辑与
+|| 逻辑或
+! 逻辑非
+& 按位与
+| 按位或
+^ 按位异或
+<< 左移
+>> 右移
+
+#控制语句
+if 条件语句
+if...else 条件语句
+switch 多分支选择语句
+for 循环语句
+while 循环语句
+do...while 循环语句
+break 跳出循环
+continue 跳过本次循环
+goto 无条件跳转语句
+
+/n换行符
+
+
+库
+<ctype.h>是判断数据种类的库:
+    isalpha():判断是否为字母
+    isdigit():判断是否为数字
+<math.h>是数学计算库:
+    sqrt():计算平方根
+<stdbool.h>是布尔型数据库
+    bool可创建布尔数据类型
+<string.h>是字符串数据库
+    strcmp(arr1,arr2) //相等返回0,arr1长返回正反之为负值
+    
+
+牛逼的技巧
+--- 用递归进行阶乘
+    double fact(int n)//阶乘
+    {
+        if(n) return n*fact(n-1);//递归,递归的函数要加在return后面
+        else return 1;
+    }
+
+--- a,b的最大公约数与最小公倍数
+    //最大公约数
+    for(int i=b;i>=1;i--){
+        // printf("%d\n",i);
+        if(b%i==0){
+            for(int j=a;j>=1;j--){
+                if(a%j==0&&j==i&&max==0){
+                    max=j;
+                }
+            }
+        }
+    }
+    //最小公倍数
+    min=b/max*a;  //谁大谁小都一样
+
+--- 快速排序
+    #include <stdlib.h> //快速排序的函数所在
+    // 比较函数，用qsort时需要
+    int compare(const void *a, const void *b) {
+        return (*(int *)a - *(int *)b);
+    }
+    qsort(arr, n, sizeof(a[0]), compare); //给a数组排序以便二分
+
+--- 数字转字符
+    int n;
+    scanf("%d",&n);
+    char c=n+'0';
+--- 字符转数字
+    char n;
+    scanf("%c",&n);
+    int c=n-'0';
+
+--- 判断是否为素数还可以这样
+	int a,i,j;
+	scanf("%d",&a);
+	for(i=2;i<=a;i++)
+		{
+		for(j=2;j<=i;j++)
+			if(i%j==0)
+				break;
+		if(i==j)
+			printf("%d ",i);
+		}
+--- 比大小,用宏
+    #define MAX(x,y) (x>y?x:y)
+    #define MIN(x,y) (x>y?y:x)
+
+--- 判断立方数
+	for(i=0;i<=sqrt(a);i++) //立方数开根可得到基数
+	{
+	if(a==i*i*i)
+		b++;//计数器
+	}
+    
+--- 求中间值
+    int mid = (l + r) >> 1;
+    >>是位运算符，意思为将l+r的结果向右移一位
+    相当于对2整除，求中间值，相当于(l+r)/2
+
+--- 位运算
+    1<<n表示将数字1左移n位，相当于计算2^n
+    如1<<4,计算结果为2^4=16
+
+--- 在一个str中找有没有子串strFind与其匹配，若有返回
+    开始位置，否则返回-1
+    int len=strlen(str);
+	int lenF=strlen(strFind);
+    for(int i=0;i<=len-lenF;i++){
+        if(strncmp(str+i,strFind,lenF)==0) return i;
+    }
+
+--- 判断一个数是否回文
+    // 判断是否为回文数
+    bool judge(int num) {
+        if (num % 10 == 0 && num != 0) return false; // 以0结尾的数不能是回文数
+        int reversed = 0, original = num;
+        while (num) {
+            reversed = reversed * 10 + num % 10;   //把数字串倒置
+            num /= 10;
+        }
+        return original == reversed;
+    }

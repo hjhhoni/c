@@ -1,0 +1,3 @@
+﻿  复习.cpp
+复习.obj : error LNK2005: main 已经在 SqList.obj 中定义
+D:\programmer_work\c\game_pro\STUSYS\x64\Debug\STUSYS.exe : fatal error LNK1169: 找到一个或多个多重定义的符号

@@ -1,0 +1,120 @@
+﻿  源.cpp
+D:\programmer_work\c\game_pro\book\book\源.cpp(29,27): error C2665: “textwidth”: 没有重载函数可以转换所有参数类型
+      D:\programa-tool\VS\visual studio\VC\Auxiliary\VS\include\easyx.h(228,5):
+      可能是“int textwidth(TCHAR)”
+          D:\programmer_work\c\game_pro\book\book\源.cpp(29,27):
+          “int textwidth(TCHAR)”: 无法将参数 1 从“const char *”转换为“TCHAR”
+              D:\programmer_work\c\game_pro\book\book\源.cpp(29,37):
+              没有使该转换得以执行的上下文
+      D:\programa-tool\VS\visual studio\VC\Auxiliary\VS\include\easyx.h(227,5):
+      或    “int textwidth(LPCTSTR)”
+          D:\programmer_work\c\game_pro\book\book\源.cpp(29,27):
+          “int textwidth(LPCTSTR)”: 无法将参数 1 从“const char *”转换为“LPCTSTR”
+              D:\programmer_work\c\game_pro\book\book\源.cpp(29,37):
+              指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      D:\programmer_work\c\game_pro\book\book\源.cpp(29,27):
+      尝试匹配参数列表“(const char *)”时
+  
+D:\programmer_work\c\game_pro\book\book\源.cpp(30,28): error C2665: “textheight”: 没有重载函数可以转换所有参数类型
+      D:\programa-tool\VS\visual studio\VC\Auxiliary\VS\include\easyx.h(230,5):
+      可能是“int textheight(TCHAR)”
+          D:\programmer_work\c\game_pro\book\book\源.cpp(30,28):
+          “int textheight(TCHAR)”: 无法将参数 1 从“const char *”转换为“TCHAR”
+              D:\programmer_work\c\game_pro\book\book\源.cpp(30,39):
+              没有使该转换得以执行的上下文
+      D:\programa-tool\VS\visual studio\VC\Auxiliary\VS\include\easyx.h(229,5):
+      或    “int textheight(LPCTSTR)”
+          D:\programmer_work\c\game_pro\book\book\源.cpp(30,28):
+          “int textheight(LPCTSTR)”: 无法将参数 1 从“const char *”转换为“LPCTSTR”
+              D:\programmer_work\c\game_pro\book\book\源.cpp(30,39):
+              指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      D:\programmer_work\c\game_pro\book\book\源.cpp(30,28):
+      尝试匹配参数列表“(const char *)”时
+  
+D:\programmer_work\c\game_pro\book\book\源.cpp(31,5): error C2665: “outtextxy”: 没有重载函数可以转换所有参数类型
+      D:\programa-tool\VS\visual studio\VC\Auxiliary\VS\include\easyx.h(226,6):
+      可能是“void outtextxy(int,int,TCHAR)”
+          D:\programmer_work\c\game_pro\book\book\源.cpp(31,5):
+          “void outtextxy(int,int,TCHAR)”: 无法将参数 3 从“const char *”转换为“TCHAR”
+              D:\programmer_work\c\game_pro\book\book\源.cpp(31,23):
+              没有使该转换得以执行的上下文
+      D:\programa-tool\VS\visual studio\VC\Auxiliary\VS\include\easyx.h(225,6):
+      或    “void outtextxy(int,int,LPCTSTR)”
+          D:\programmer_work\c\game_pro\book\book\源.cpp(31,5):
+          “void outtextxy(int,int,LPCTSTR)”: 无法将参数 3 从“const char *”转换为“LPCTSTR”
+              D:\programmer_work\c\game_pro\book\book\源.cpp(31,23):
+              指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      D:\programmer_work\c\game_pro\book\book\源.cpp(31,5):
+      尝试匹配参数列表“(int, int, const char *)”时
+  
+D:\programmer_work\c\game_pro\book\book\源.cpp(46,5): error C2664: “bool InputBox(LPTSTR,int,LPCTSTR,LPCTSTR,LPCTSTR,int,int,bool)”: 无法将参数 1 从“char [100]”转换为“LPTSTR”
+      D:\programmer_work\c\game_pro\book\book\源.cpp(46,14):
+      指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      D:\programa-tool\VS\visual studio\VC\Auxiliary\VS\include\easyx.h(287,6):
+      参见“InputBox”的声明
+      D:\programmer_work\c\game_pro\book\book\源.cpp(46,5):
+      尝试匹配参数列表“(char [100], int, const wchar_t [7])”时
+  
+D:\programmer_work\c\game_pro\book\book\源.cpp(47,5): error C2664: “bool InputBox(LPTSTR,int,LPCTSTR,LPCTSTR,LPCTSTR,int,int,bool)”: 无法将参数 1 从“char [100]”转换为“LPTSTR”
+      D:\programmer_work\c\game_pro\book\book\源.cpp(47,14):
+      指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      D:\programa-tool\VS\visual studio\VC\Auxiliary\VS\include\easyx.h(287,6):
+      参见“InputBox”的声明
+      D:\programmer_work\c\game_pro\book\book\源.cpp(47,5):
+      尝试匹配参数列表“(char [100], int, const wchar_t [7])”时
+  
+D:\programmer_work\c\game_pro\book\book\源.cpp(48,5): error C2664: “bool InputBox(LPTSTR,int,LPCTSTR,LPCTSTR,LPCTSTR,int,int,bool)”: 无法将参数 1 从“char [20]”转换为“LPTSTR”
+      D:\programmer_work\c\game_pro\book\book\源.cpp(48,14):
+      指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      D:\programa-tool\VS\visual studio\VC\Auxiliary\VS\include\easyx.h(287,6):
+      参见“InputBox”的声明
+      D:\programmer_work\c\game_pro\book\book\源.cpp(48,5):
+      尝试匹配参数列表“(char [20], int, const wchar_t [10])”时
+  
+D:\programmer_work\c\game_pro\book\book\源.cpp(49,5): error C2664: “bool InputBox(LPTSTR,int,LPCTSTR,LPCTSTR,LPCTSTR,int,int,bool)”: 无法将参数 1 从“char *”转换为“LPTSTR”
+      D:\programmer_work\c\game_pro\book\book\源.cpp(49,21):
+      指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      D:\programa-tool\VS\visual studio\VC\Auxiliary\VS\include\easyx.h(287,6):
+      参见“InputBox”的声明
+      D:\programmer_work\c\game_pro\book\book\源.cpp(49,5):
+      尝试匹配参数列表“(char *, size_t, const wchar_t [9])”时
+  
+D:\programmer_work\c\game_pro\book\book\源.cpp(51,5): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\programmer_work\c\game_pro\book\book\源.cpp(52,5): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\programmer_work\c\game_pro\book\book\源.cpp(53,5): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\programmer_work\c\game_pro\book\book\源.cpp(74,5): error C2664: “int MessageBoxW(HWND,LPCWSTR,LPCWSTR,UINT)”: 无法将参数 2 从“char [1024]”转换为“LPCWSTR”
+      D:\programmer_work\c\game_pro\book\book\源.cpp(74,27):
+      指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winuser.h(9180,1):
+      参见“MessageBoxW”的声明
+      D:\programmer_work\c\game_pro\book\book\源.cpp(74,5):
+      尝试匹配参数列表“(HWND, char [1024], const wchar_t [5], long)”时
+  
+D:\programmer_work\c\game_pro\book\book\源.cpp(70,9): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\programmer_work\c\game_pro\book\book\源.cpp(72,9): error C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\programmer_work\c\game_pro\book\book\源.cpp(80,5): error C2664: “bool InputBox(LPTSTR,int,LPCTSTR,LPCTSTR,LPCTSTR,int,int,bool)”: 无法将参数 1 从“char [20]”转换为“LPTSTR”
+      D:\programmer_work\c\game_pro\book\book\源.cpp(80,14):
+      指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      D:\programa-tool\VS\visual studio\VC\Auxiliary\VS\include\easyx.h(287,6):
+      参见“InputBox”的声明
+      D:\programmer_work\c\game_pro\book\book\源.cpp(80,5):
+      尝试匹配参数列表“(char [20], int, const wchar_t [17])”时
+  
+D:\programmer_work\c\game_pro\book\book\源.cpp(87,13): error C2664: “int MessageBoxW(HWND,LPCWSTR,LPCWSTR,UINT)”: 无法将参数 2 从“char [256]”转换为“LPCWSTR”
+      D:\programmer_work\c\game_pro\book\book\源.cpp(87,35):
+      指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\um\winuser.h(9180,1):
+      参见“MessageBoxW”的声明
+      D:\programmer_work\c\game_pro\book\book\源.cpp(87,13):
+      尝试匹配参数列表“(HWND, char [256], const wchar_t [5], long)”时
+  
+D:\programmer_work\c\game_pro\book\book\源.cpp(85,13): error C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\programmer_work\c\game_pro\book\book\源.cpp(98,5): error C2664: “bool InputBox(LPTSTR,int,LPCTSTR,LPCTSTR,LPCTSTR,int,int,bool)”: 无法将参数 1 从“char [20]”转换为“LPTSTR”
+      D:\programmer_work\c\game_pro\book\book\源.cpp(98,14):
+      指向的类型不相关; 转换需要 reinterpret_cast、C 样式强制转换或带圆括号的函数样式强制转换
+      D:\programa-tool\VS\visual studio\VC\Auxiliary\VS\include\easyx.h(287,6):
+      参见“InputBox”的声明
+      D:\programmer_work\c\game_pro\book\book\源.cpp(98,5):
+      尝试匹配参数列表“(char [20], int, const wchar_t [17])”时
+  
+D:\programmer_work\c\game_pro\book\book\源.cpp(130,19): error C3861: “getmouse”: 找不到标识符

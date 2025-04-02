@@ -1,0 +1,117 @@
+库
+c的但是可以在c++中使用
+<cmath>
+    数学函数
+    floor ：四舍五入
+
+<ctype.h>是判断数据种类的库:
+    isalpha():判断是否为字母
+    isdigit():判断是否为数字    
+
+<cstring>
+    字符操作函数
+    strlen，strcpy，strcat，strcmp，strncpy，strstr，memset，memcpy
+    strcmp(arr1,arr2) //相等返回0,arr1长返回正反之为负值
+
+c++的
+<string>
+    string s; //定义字符串
+    s.find(t); //看看s里面有没有t这个子串
+    string str1 = "Hello, World!";
+    string str2(10, 'A'); // 创建一个包含10个'A'的字符串
+    string str3 = str1 + " " + str2; // 链接字符串
+    size_t length = str1.length(); // 获取长度
+    string sub = str1.substr(0, 5); // 获取子字符串（从索引0开始，长度为5）,(index,length)
+    size_t pos = str1.find("World"); // 查找"World"的位置
+    str1.replace(7, 5, "C++"); // 将"World"替换为"C++"，开始位，结束位，替换内容
+    if (str1 == str2) {
+        // 字符串相等
+    }
+    str1.clear(); // 清空字符串
+    if(a==string(a.rbegin(),a.rend())) //判断字符串是否回文
+    to_string(num); //转化为字符串
+    char s = '6' ,int b = s - '0'; //转化为数字,b = 6 
+    rotate(str.begin(), str.begin() + 1, str.end()); //把字符串左移一个位置
+    B.erase(0, B.find_first_not_of('0')); //去除字符串B的前导0
+    overwrite_string(s, start, end, new_value)://将字符串s中从start到end的字符替换为new_value
+    stoi(s) //将字符串s转化为整数
+
+
+<iomanip> 
+    //调整输出格式，控制小数点位，数字宽和填充
+    setprecision(1) //保留1位小数
+    fixed //用十进制输出，不加则为科学计数法
+    如：cout << fixed << setprecision(1) << e1 << endl;
+
+<algorithm>
+    //算法函数
+    sort(a,a+n,def) //对一个有n个元素的数组a排序，也可以对字符串按照字典序进行排序，第三个参数是compare函数，可以自定义排序的规则
+    fill(a + l, a + r, sum); 对一个数组a的区间[l,r-1]填入sum的值
+    reverse(f,s)会把区间[f,s]的元素反转
+
+<vector>
+    //动态数组（向量）
+    定义一维数组：vector<int> name(size,value)
+    二维数组：vector<vector<int>> name(n,vector<int>(n,0))
+    引用一维数组：vector<int>& name
+    引用二维数组：vector<vector<int>>& name
+
+注意：
+--- 从一个点往后取k位，要读到=i-k
+--- 读取带空格的字符串要用getline
+--- longlong到9e18,int到2e9
+--- 计算机中负数用补码形式储存，故用按位与即可算出补码中1个数
+    // 计算补码中1的个数
+    int count = 0;
+    for (int i = 0; i < 64; ++i) {
+        if (n & (1LL << i)) count++; // 检查每一位是否为1
+        此处1会变成10，100，1000，逐渐把每一位二进制位过一遍
+    }
+--- 单个字符用单引号，多个字符用双引号
+--- double的数是15到17位二进制数，而long double是18到19位
+--- long long 和long long int 等价
+--- 构建树时空指针最好用nullptr，更加安全且明确是空指针
+--- 不加大括号时，条件语句或判断语句只针对其接着的下一句。
+--- while循环别忘了条件，跳出循环的条件
+--- 创建链表时不要拘泥于形式，要有struct Dnode *next,带上struct
+--- c中空用NULL，c++中用nullptr
+--- 读数字时不能用char读，因为超过9就无法正确显示了，最多0~9
+
+
+
+
+技巧：
+--- getchar(); //确保在读取棋盘信息之前，处理掉上一个输入后残留的换行   
+    for(i=0;i<n;i++) 
+        gets(Chess[i]); //gets(Chess[i]); 这行代码的意思是从标准输入中读取
+        一行字符，并将读取的内容存储到 Chess[i] 数组中。这里 Chess 是一个字符
+        串数组，每个元素代表棋盘中的一行输入。需要注意的是，gets 函数在读取输
+        入时没有做输入长度限制，因此可能导致缓冲区溢出的问题。因此，建议使用 
+        fgets 函数来替代 gets，以确保安全性。
+--- cin.tie(0)，你可以提高输入效率，特别是在大量输入输出操作的情况下。在许多竞
+    争，编程环境中，常常会看到这两行代码以提高程序性能。
+--- typedef long long ll; 可以节约输入开支
+--- max和min是内置的函数可以直接用，这两个函数还可以依据字典序比较字符串的大小
+--- for (int i = 0; str[i]; ++i)可以遍历字符数组，在C++中'\0'代表false
+--- i++是表达式计算之后i自增，++i是表达式计算之前i自增,
+    在for(;;i++)和for(;;++i) 是一样的效果
+--- 若想要进行循环一个方向数组（假定四个方向）可以在转向条件那里加di=(di+1)%4,
+    结果一定在{0,1,2,3}里
+--- 建立链表是要注意头尾指针的运用 D:\programmer_work\c\11.22\链表的尾插法.cpp
+--- vector<int> v(n);  
+    for(auto &i : v){ //  //auto &i : v 表示对 v 中的每个元素进行引用，并使用 i 作为引用名实现赋值
+        cin >> i;
+    }
+--- ranges::sort(a); //c++17的排序函数，可以排序vector，string，数组等,自动识别类型
+--- auto t = 1ll * m; //将m转化为long long类型，1ll是long long类型的1，auto t是自动识别类型
+--- 当想减小一个程序的空间复杂度，不妨考虑传递一些值的时候加上引用&，这样子就可以直接调用原值，而不是复制一份
+--- 最大公约数与最小公倍数
+    int gcd(int a, int b){ //计算最大公约数
+        return b==0?a:gcd(b, a%b);
+    }
+    int lcm(int a, int b){ //计算最小公倍数
+        return a*b/gcd(a,b);
+    }
+--- 四舍五入
+    int h = n/2;
+    if((double)n/2-(double)h>=0.5) h+=1;

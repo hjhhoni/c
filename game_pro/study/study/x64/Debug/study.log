@@ -1,7 +1,2 @@
 ﻿  源1.cpp
-D:\programmer_work\c\game_pro\study\study\源1.cpp(50,11): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-D:\programmer_work\c\game_pro\study\study\源1.cpp(65,15): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-D:\programmer_work\c\game_pro\study\study\源1.cpp(84,11): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-D:\programmer_work\c\game_pro\study\study\源1.cpp(100,15): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-D:\programmer_work\c\game_pro\study\study\源1.cpp(33,1): warning C4715: “EnQueue”: 不是所有的控件路径都返回值
-  study.vcxproj -> D:\programmer_work\c\game_pro\study\x64\Debug\study.exe
+D:\programmer_work\c\game_pro\study\study\源1.cpp(4,5): error C2148: 数组的总大小不得超过 0x7fffffff 字节

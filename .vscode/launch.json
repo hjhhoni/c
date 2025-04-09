@@ -43,8 +43,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/programmer_work/c/数据结构/队列",
-      "program": "d:/programmer_work/c/数据结构/队列/build/Debug/outDebug",
+      "cwd": "d:/programmer_work/c/蓝桥",
+      "program": "d:/programmer_work/c/蓝桥/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

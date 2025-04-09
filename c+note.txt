@@ -115,3 +115,5 @@ c++的
 --- 四舍五入
     int h = n/2;
     if((double)n/2-(double)h>=0.5) h+=1;
+--- 小数保留n位cout<<setprecision(n)<<fixed<<a;
+--- puts("YES");  // 打印字符串并换行,puts是C语言的函数，在C++中，建议使用cout来代替。

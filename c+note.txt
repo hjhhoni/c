@@ -76,6 +76,9 @@ c++的
 --- 创建链表时不要拘泥于形式，要有struct Dnode *next,带上struct
 --- c中空用NULL，c++中用nullptr
 --- 读数字时不能用char读，因为超过9就无法正确显示了，最多0~9
+--- 邻接表若需要定位a[N],那么应该vector<int> a[N]或者vector<vector<int>> a(N);
+    无需确定N时可以直接用vector<int> a;，再push_back();
+--- printf("%0.0f",a)可以把小数四舍五入输出
 
 
 

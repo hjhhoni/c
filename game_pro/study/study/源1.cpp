@@ -64,6 +64,20 @@ void lastorder(Tree* Node) {  // 后序遍历，左右根
 	cout << Node->val;
 }
 
+void levelorder(Tree* Node,int depth,int i) {  // 层次遍历，根左右
+	if (Node == NULL) {
+		if(depth==i)cout << "^";
+		return;
+	}
+	if(depth==i)cout << Node->val;
+	else {
+		levelorder(Node->ltree, depth + 1, i);// 遍历左子树
+		levelorder(Node->rtree, depth + 1, i);// 遍历右子树
+
+	}
+	return;
+}
+
 void disH(Tree* Node, int h) {  // 计算高度
 	if (Node == NULL) {
 		height = max(height, h);
@@ -136,16 +150,19 @@ int main() {
 	cout << "前序遍历：";preorder(T);cout << endl<<endl;					// 1.先序遍历输出该树（带“^"标志)
 	cout << "中序遍历：";inorder(T);cout << endl << endl;				// 2.中序遍历输出该树（带“^"标志)
 	cout << "后序遍历：";lastorder(T);cout << endl << endl;				// 3.后序遍历输出该树（带“^"标志)
-	disH(T,0);
+	cout << "层次遍历："<<endl;
+	disH(T, 0);															// 获取树的高度（）层数
+	for(int i=1;i<=height;i++) levelorder(T,1,i);							// 4.层次遍历输出该树（带“^"标志)
+	cout << endl << endl;		
 	cout << "先序凹入表表示法：" << endl;
-	aopreorder(T,1);cout << endl;										// 4.先序凹入表表示法
+	aopreorder(T,1);cout << endl;										// 5.先序凹入表表示法
 	cout << "中序凹入表表示法：" << endl;
-	aoinorder(T, 1);cout << endl;										// 5.中序凹入表表示法
+	aoinorder(T, 1);cout << endl;										// 6.中序凹入表表示法
 	cout << "后序凹入表表示法：" << endl;
-	aolastorder(T, 1);cout << endl;										// 6.后序凹入表表示法
-	revtree(T);															// 7.反转二叉树
-	cout << "反转二叉树的括号先序遍历："<<endl;kuohaodis(T);				// 8.括号表示法输出
-	del(T);																// 9.销毁二叉树
+	aolastorder(T, 1);cout << endl;										// 7.后序凹入表表示法
+	revtree(T);															// 8.反转二叉树
+	cout << "反转二叉树的括号先序遍历："<<endl;kuohaodis(T);				// 9.括号表示法输出
+	del(T);																// 10.销毁二叉树
 	cout << endl;
 	return 0;
 

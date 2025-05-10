@@ -56,6 +56,28 @@ c++的
     引用一维数组：vector<int>& name
     引用二维数组：vector<vector<int>>& name
 
+<queue>
+    //队列
+    优先队列：
+    priority_queue<int> q; //定义一个优先队列，默认从大到小排序
+    queue<int> q; //定义一个队列
+    q.push(x); //将x入队
+    q.pop(); //将队首元素出队
+    q.front(); //返回队首元素
+    q.back(); //返回队尾元素
+    q.empty(); //判断队列是否为空
+    q.size(); //返回队列中元素的个数
+    // 双端队列deque<int> deq
+    deq.pop_back();  // 弹出末端
+    deq.pop_front(); // 弹出前端
+    deq..push_back();  // 插入后端
+
+<stack>
+    //栈
+    stack<int> s; //定义一个栈
+    s.push(x); //将x入栈
+    s.pop(); //将栈顶元素出栈
+
 注意：
 --- 从一个点往后取k位，要读到=i-k
 --- 读取带空格的字符串要用getline
@@ -124,3 +146,4 @@ c++的
 --- 初始化二维数组: int arr[][3] = {{0,1,2},{3,4,5},{6,7,8},{9,10,11}};
 --- 初始化三维数组: int arr[][3][2] = {{{0,1},{2,3},{4,5}},{{6,7},{8,9},{10,11}}};
 --- 初始化字符串: char str[] = "Hello World";
+--- condition ? expression1 : expression2; //三目运算符如果 condition 为真（即非零或非空），则整个表达式的结果是 expression1 的值；如果 condition 为假（即零或空），则整个表达式的结果是 expression2 的值。

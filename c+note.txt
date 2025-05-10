@@ -146,4 +146,12 @@ c++的
 --- 初始化二维数组: int arr[][3] = {{0,1,2},{3,4,5},{6,7,8},{9,10,11}};
 --- 初始化三维数组: int arr[][3][2] = {{{0,1},{2,3},{4,5}},{{6,7},{8,9},{10,11}}};
 --- 初始化字符串: char str[] = "Hello World";
---- condition ? expression1 : expression2; //三目运算符如果 condition 为真（即非零或非空），则整个表达式的结果是 expression1 的值；如果 condition 为假（即零或空），则整个表达式的结果是 expression2 的值。
+--- condition ? expression1 : expression2; //三目运算符如果  condition 为真（即非零或非空），则整个表达式的结果是 expression1 的值；如果 condition 为假（即零或空），则整个表达式的结果是 expression2 的值。
+--- vector<int> cnt1(26), cnt2(26); 用vector做哈希表的时候可以直接用==比较，无需遍历对比
+        for (int i = 0; i < n; ++i) {
+            ++cnt1[s1[i] - 'a'];
+            ++cnt2[s2[i] - 'a'];
+        }
+        if (cnt1 == cnt2) {
+            return true;
+        }
